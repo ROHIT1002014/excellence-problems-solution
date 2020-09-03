@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 1 Solution</title>
+</head>
+<body>
+<h3>Even No. data of array are </h3>
+<ul id="data">
+</ul>
+<script>
+  var a = [1, 2, 1, 248, 11, 9, 47, 0, 7, 277, 4, 28, 143, 10, 26, 7];
+  var outputData = ""
+  a.forEach((i) =>{
+    if(i % 2 == 0){
+        outputData+= "<li>" +`${i}`+"</li>"
+        }
+    }
+  )
+  document.getElementById("data").innerHTML = outputData;
+
+</script>
+</body>
+</html>
