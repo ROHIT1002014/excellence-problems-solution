@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 7 Solution</title>
+</head>
+<body>
+<h3>Make AJAX call  </h3>
+<script>
+const url = "https://jsonplaceholder.typicode.com/todos/"
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log(this.responseText)
+  }
+};
+xhttp.open("GET", url, true);
+xhttp.send();
+</script>
+</body>
+</html>
