@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 2 Solution</title>
+</head>
+<body>
+<h3>Duplicate value in array is </h3>
+<ul id="data">
+</ul>
+<script>
+var arrayData= [0,1,2,3,4,5,6,7,7,8,9,10]
+var duplicateValue = {};
+var result = 99999;
+
+// it will store value and its no. of type appear in array
+arrayData.forEach(item => {
+  if(!duplicateValue[item])
+      duplicateValue[item] = 0;
+    duplicateValue[item] += 1;
+})
+
+
+console.log(duplicateValue)
+for (const prop in duplicateValue) {
+    if(duplicateValue[prop] >= 2) {
+        result =prop;
+        break;
+    }
+}
+document.getElementById("data").innerHTML = result;
+console.log(result)
+</script>
+</body>
+</html>
