@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 1 Solution</title>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["firstname"].value;
+  var checkValue = document.forms["myForm"]["checkme"].checked;
+  //console.log(checkValue)
+  if(checkValue) {
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
+  else {
+    alert("please accept T & C");
+  }
+}
+</script>
+</script>
+</head>
+<body>
+<h3>Even No. data of array are </h3>
+<ul id="data">
+</ul>
+<form name="myForm" method="POST" onsubmit="return validateForm()">
+  <input type="text" name="firstname" />
+  <input type="checkbox" value="check" name="checkme" />
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
